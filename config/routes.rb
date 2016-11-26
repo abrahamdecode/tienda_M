@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  resources :items
+
   get 'welcome/index'
+  get 'products/index'
+  
+  resources :brands
+
+  resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

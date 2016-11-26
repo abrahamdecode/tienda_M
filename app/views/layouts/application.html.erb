@@ -1,14 +1,44 @@
 <!DOCTYPE html>
+<!-- Esta es la vista general de el sitio -->
 <html>
+
 <head>
-  <title>TiendaM</title>
+  <title>MyStore</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="Site fondo-negro ">
+  <!-- header de la pagina -->
+  <header>
+    <nav class="be-red white large-padding">
+      <ul class="no-list row center-xs middle-xs">
+        <li class="col-md">
+          <h1 class="no-margin white">My Store</h1>
+        </li>
+        <li class="col-md">
+          <%=link_to "Inicio",root_path%>
+        </li>
+        <li class="col-md">
+        <%=link_to "Marcas",new_brand_path%>
+        </li>
+        <li class="col-md">
+          <%=link_to "Productos",new_product_path%>
+        </li>
+        <li class="col-md">
+          Listado
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+
+
 
 <%= yield %>
 
 </body>
+  <footer class="white">Pedro Abraham Espinosa Gil</footer>
 </html>

@@ -1,0 +1,6 @@
+<h1 class="white">Listado de Productos!</h1>
+<%@products.each do |product|%>
+  <h3 class="white"><%=product.name %>-<%= link_to"Eliminar" ,product,:confirm => "Seguro desea eliminar este Producto?",method: :delete%></h3>
+
+
+  <%end%>
