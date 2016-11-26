@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   get 'products/index'
-  
+  get 'brands/index'
+
   resources :brands
 
   resources :products

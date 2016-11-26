@@ -1,6 +1,6 @@
 <div style="width:80%";margin:0 auto;>
   <h1 class="white">Crear Producto</h1>
-  <%= form_for(@product) do |f|%>
+  <%= simple_form_for(@product) do |f|%>
 
     <!-- Aqui es donde comienza la validacion de errores de articles-->
       <%@product.errors.full_messages.each do |message|%>
@@ -10,13 +10,10 @@
       <%end%>
   <!-- Aqui termina la validacion de errores de articles -->
 
-      <div class="field">
-        <%= f.text_field :name, placeholder: "Nombre",class:"form-control"%>
-      </div>
+      <%=f.input :name, placeholder: "Nombre"%>
+        <%=f.association :brand, placeholder:"Marca"%>
 
-      <div class="field">
-        <%= f.text_field :brand, placeholder: "Marca",class:"form-control"%>
-      </div>
+
 
       <div class="field">
         <%= f.text_field :description, placeholder: "Descripcion",class:"form-control"%>

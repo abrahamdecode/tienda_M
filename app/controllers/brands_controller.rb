@@ -20,11 +20,12 @@ def create
     else
       render :new
     end
-  
+
 end
 
 
 def edit
+  @brand = Brand.find(params[:id])
 end
 
 def update
