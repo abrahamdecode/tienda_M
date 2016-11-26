@@ -15,15 +15,12 @@ end
 def create
   @brand = Brand.new(brand_params)
 
-  respond_to do |format|
     if @brand.save
-      format.html { redirect_to @brand, notice: 'brand was successfully created.' }
-      format.json { render :show, status: :created, location: @brand }
+      redirect_to @brand
     else
-      format.html { render :new }
-      format.json { render json: @brand.errors, status: :unprocessable_entity }
+      render :new
     end
-  end
+  
 end
 
 
