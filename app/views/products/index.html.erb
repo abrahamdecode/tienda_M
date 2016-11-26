@@ -1,9 +1,11 @@
 <h1 class="white">Listado de Productos!</h1>
-<%@products.each do |product|%>
-  <h3 class="white"><%=product.name %>-<%= link_to"Eliminar" ,product,:confirm => "Seguro desea eliminar este Producto?",method: :delete%></h3>
-  <h3 class="white"><%=product.brand %></h3>
-  <h3 class="white"><%=product.description %></h3>
-  <h3 class="white"><%=product.price %>-</h3>
+<br>
 
+<%@products.each do |product|%>
+  <h3 class="white">Nombre: <%=product.name %>-<%= link_to"Eliminar" ,product,:confirm => "Seguro desea eliminar este Producto?",method: :delete%></h3>
+  <h3 class="white">Marca: <%=product.brand.name %></h3>
+  <h3 class="white">Descripcion: <%=product.description %></h3>
+  <h3 class="white">Precio: <%=product.price %>$</h3>
+<br><br>
 
   <%end%>

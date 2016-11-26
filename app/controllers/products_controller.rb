@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @brand=Brand.all
   end
 
   def show
@@ -13,7 +14,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new ({name: params[:product][:name], brand: params[:product][:brand],description: params[:product][:description],price: params[:product][:price]})
+    @product = Product.new ({name: params[:product][:name], brand_id: params[:product][:brand_id],description: params[:product][:description],price: params[:product][:price]})
 
     respond_to do |format|
       if @product.save
@@ -46,7 +47,7 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name,:brand,:description,:price)
+      params.require(:product).permit(:name,:brand_id,:description,:price)
     end
 
   end

@@ -10,8 +10,10 @@
       <%end%>
   <!-- Aqui termina la validacion de errores de articles -->
 
-      <%=f.input :name, placeholder: "Nombre"%>
-        <%=f.association :brand, placeholder:"Marca"%>
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Nombre",class:"form-control"%>
+  </div>
+        <%=f.association :brand, placeholder:"Marca", label:false%>
 
 
 
