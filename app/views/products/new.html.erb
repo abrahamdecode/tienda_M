@@ -11,7 +11,19 @@
   <!-- Aqui termina la validacion de errores de articles -->
 
       <div class="field">
-        <%= f.text_field :name, placeholder: "Producto",class:"form-control"%>
+        <%= f.text_field :name, placeholder: "Nombre",class:"form-control"%>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :brand, placeholder: "Marca",class:"form-control"%>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :description, placeholder: "Descripcion",class:"form-control"%>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :price, placeholder: "Precio",class:"form-control"%>
       </div>
 
           <%=f.submit "guardar",class:"btn be-red white"  %>
