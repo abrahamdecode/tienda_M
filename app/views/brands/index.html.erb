@@ -1,6 +1,8 @@
 <h1 class="white">Listado de marcas!</h1>
 <%@brands.each do |brand|%>
-  <h3 class="white"><%=brand.name %>-<%= link_to"Eliminar" ,brand,:confirm => "Seguro desea eliminar esta marca?",method: :delete%>-<%= link_to 'Editar', edit_brand_path(brand),{:style=>"color:#fff"}%></h3>
+  <h3 class="white"><%=brand.name %>-<%= link_to 'Eliminar',brand, :method => :delete, data: { confirm: 'Seguro desea eliminar esta marca??'} %>-<%= link_to 'Editar', edit_brand_path(brand),{:style=>"color:#fff"}%></h3>
+
+
 
 
   <%end%>
