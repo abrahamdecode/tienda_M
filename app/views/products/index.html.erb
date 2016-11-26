@@ -2,7 +2,7 @@
 <br>
 
 <%@products.each do |product|%>
-  <h3 class="white">Nombre: <%=product.name %>-<%= link_to"Eliminar" ,product,:confirm => "Seguro desea eliminar este Producto?",method: :delete%>-<%= link_to 'Editar', edit_product_path(product) %></h3>
+  <h3 class="white">Nombre: <%=product.name %>-<%= link_to"Eliminar" ,product,:confirm => "Seguro desea eliminar este Producto?",method: :delete%>-<%= link_to 'Editar', edit_product_path(product),{:style=>"color:#fff"} %></h3>
 
   <h3 class="white">Marca: <%=product.brand.name %></h3>
   <h3 class="white">Descripcion: <%=product.description %></h3>
