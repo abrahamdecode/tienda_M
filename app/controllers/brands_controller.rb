@@ -26,9 +26,18 @@ end
 
 def edit
   @brand = Brand.find(params[:id])
+
 end
 
 def update
+  @brand = Brand.find(params[:id])
+
+    if @brand.update_attributes(brand_params)
+       redirect_to :action => 'show', :id => @brand
+    else
+       render :action => 'edit'
+    end
+
 end
 
 def destroy

@@ -1,0 +1,36 @@
+<div style="width:80%";margin:0 auto;>
+  <h1 class="white">Editar Producto</h1>
+  <%= simple_form_for(@product) do |f|%>
+
+    <!-- Aqui es donde comienza la validacion de errores de articles-->
+      <%@product.errors.full_messages.each do |message|%>
+      <div class="be-red white top-space">
+        * <%=message%>
+      </div>
+      <%end%>
+  <!-- Aqui termina la validacion de errores de articles -->
+
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Nombre",class:"form-control"%>
+  </div>
+        <%=f.association :brand, placeholder:"Marca", label:false%>
+
+
+
+      <div class="field">
+        <%= f.text_field :description, placeholder: "Descripcion",class:"form-control"%>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :price, placeholder: "Precio",class:"form-control"%>
+      </div>
+
+          <%=f.submit "guardar",class:"btn be-red white"  %>
+      </div>
+
+</div>
+<div class="row">
+  <div class="btn white top-space center">
+    <%=link_to "Ver todos los Productos",products_path,class:"btn be-red white"%>
+</div>
+<% end %>
