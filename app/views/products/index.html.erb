@@ -1,5 +1,6 @@
 <h1 class="white">Listado de Productos!</h1>
 <br>
+<h1 class="white">La suma del precio de todos los productos es:  <%=Product.sum(:price) %>$</h1>
 
 <%@products.each do |product|%>
   <h3 class="white">Nombre: <%=product.name %>-<%= link_to 'Eliminar',product, :method => :delete, data: { confirm: 'Seguro desea eliminar este producto?'} %>-<%= link_to 'Editar', edit_product_path(product),{:style=>"color:#fff"} %></h3>
